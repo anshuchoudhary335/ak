@@ -1,0 +1,145 @@
+{% extends 'navbar.html' %}
+
+{% load static %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style media="screen">
+    .jumbotron {
+      height: 900;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg2.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .lead {
+      position: absolute;
+      top: 88%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .alert {
+      margin: 0px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: rgb(0, 162, 255);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 10px;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: white;
+    }
+
+    .glow {
+      font-size: 70px;
+      color: #ffffff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+  </style>
+
+</head>
+
+<body style="background-color: white;">
+
+  <br>
+  <br>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;" >
+    <br>
+    <h1 class="display-4 glow">Welcome</h1>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Take Admission</a>
+    </p>
+    <br><br>
+  </div>
+<br><br><br><br><br><br>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src='{% static "images/admin.png" %}' alt="John" style="width:100%">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Admin</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src='{% static "images/teacher.png" %}' alt="John" style="width:100%">
+        <a class="btn btn-primary btn-lg" href="#" role="button">TEACHER</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src='{% static "images/student1.png" %}' alt="John" style="width:100%">
+        <a class="btn btn-primary btn-lg" href="#" role="button">STUDENT</a>
+      </div>
+
+  </div>
+  
+  
+{% endblock %}
+</body>
+
+</html>
+
